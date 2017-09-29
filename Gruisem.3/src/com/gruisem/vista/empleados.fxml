@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="995.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gruisem.controlador.ControladorEmpleado">
+   <children>
+      <SplitPane dividerPositions="0.5690909090909091" layoutX="171.0" layoutY="114.0" orientation="VERTICAL" prefHeight="508.0" prefWidth="939.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="310.0" prefWidth="875.0">
+               <children>
+                  <TitledPane animated="false" collapsible="false" layoutX="55.0" layoutY="18.0" prefHeight="227.0" prefWidth="290.0" text="Datos generales">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="216.0" prefWidth="280.0">
+                           <children>
+                              <GridPane layoutX="21.0" layoutY="6.0" prefHeight="188.0" prefWidth="260.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="109.0" minWidth="10.0" prefWidth="108.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0" prefWidth="143.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.0" minWidth="10.0" prefWidth="15.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label layoutX="43.0" layoutY="158.0" text="F. Nacimiento:" GridPane.rowIndex="3" />
+                                    <TextField fx:id="txtAp" layoutX="164.0" layoutY="77.0" prefHeight="25.0" prefWidth="140.0" promptText="Apellido paterno" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label layoutX="43.0" layoutY="123.0" text="Apellido materno:" GridPane.rowIndex="2" />
+                                    <Label layoutX="43.0" layoutY="198.0" text="Sexo:" GridPane.rowIndex="4" />
+                                    <TextField fx:id="txtAm" layoutX="164.0" layoutY="119.0" prefHeight="25.0" prefWidth="140.0" promptText="Apellido materno" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label layoutX="43.0" layoutY="81.0" text="Apellido paterno:" GridPane.rowIndex="1" />
+                                    <DatePicker fx:id="dpFecha" layoutX="166.0" layoutY="154.0" prefHeight="25.0" prefWidth="140.0" promptText="F. Nac" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label layoutX="43.0" layoutY="39.0" text="Nombre:" />
+                                    <TextField fx:id="txtNombre" layoutX="164.0" layoutY="35.0" prefHeight="25.0" prefWidth="140.0" promptText="Nombre" GridPane.columnIndex="1" />
+                                    <Label text="*" textFill="#f81515" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="*" textFill="#f81515" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="*" textFill="#f81515" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="*" textFill="#f81515" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="cbGenero" prefHeight="23.0" prefWidth="141.0" promptText="Seleccionar" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                 </children>
+                              </GridPane>
+                              <Label layoutX="-31.0" layoutY="198.0" text="Sexo:" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane animated="false" collapsible="false" layoutX="386.0" layoutY="17.0" prefHeight="227.0" prefWidth="251.0" text="Direccion">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="233.0" prefWidth="234.0">
+                           <children>
+                              <GridPane layoutX="19.0" layoutY="6.0" prefHeight="195.0" prefWidth="220.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="62.0" minWidth="10.0" prefWidth="62.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.0" minWidth="10.0" prefWidth="137.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="0.0" prefWidth="0.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField layoutX="164.0" layoutY="154.0" prefHeight="25.0" prefWidth="140.0" promptText="CD" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Label layoutX="43.0" layoutY="198.0" text="C. P." GridPane.rowIndex="4" />
+                                    <Label layoutX="43.0" layoutY="39.0" text="Calle:" />
+                                    <Label layoutX="43.0" layoutY="123.0" text="Colonia:" GridPane.rowIndex="2" />
+                                    <TextField fx:id="txtColonia" layoutX="164.0" layoutY="119.0" prefHeight="25.0" prefWidth="140.0" promptText="Colonia" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label layoutX="43.0" layoutY="158.0" text="Ciudad:" GridPane.rowIndex="3" />
+                                    <TextField fx:id="txtNumero" layoutX="164.0" layoutY="77.0" prefHeight="25.0" prefWidth="95.0" promptText="Número" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="txtCalle" layoutX="164.0" layoutY="35.0" prefHeight="25.0" prefWidth="140.0" promptText="Calle" GridPane.columnIndex="1" />
+                                    <TextField fx:id="txtCp" layoutX="166.0" layoutY="194.0" prefHeight="25.0" prefWidth="140.0" promptText="C. P." GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Label layoutX="43.0" layoutY="81.0" text="Número:" GridPane.rowIndex="1" />
+                                    <Label text="*" textFill="#f81515" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="*" textFill="#f81515" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="*" textFill="#f81515" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="*" textFill="#f81515" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="*" textFill="#f81515" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtCiudad" promptText="Ciudad" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label text="*" textFill="#f81515" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane animated="false" collapsible="false" layoutX="678.0" layoutY="18.0" prefHeight="112.0" prefWidth="266.0" text="Contacto">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="113.0" prefWidth="264.0">
+                           <children>
+                              <GridPane layoutX="18.0" layoutY="11.0" prefHeight="70.0" prefWidth="240.0">
+                                 <children>
+                                    <Label layoutX="43.0" layoutY="39.0" text="Teléfono:" />
+                                    <TextField fx:id="txtCorreo" layoutX="164.0" layoutY="77.0" prefHeight="25.0" prefWidth="140.0" promptText="Mail" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="txtTelefono" layoutX="164.0" layoutY="35.0" prefHeight="25.0" prefWidth="140.0" promptText="Teléfono" GridPane.columnIndex="1" />
+                                    <Label layoutX="43.0" layoutY="81.0" text="Email:" GridPane.rowIndex="1" />
+                                    <Label text="*" textFill="#f81515" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="*" textFill="#f81515" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="84.0" minWidth="10.0" prefWidth="76.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="168.0" minWidth="10.0" prefWidth="149.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="16.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <Label layoutX="-31.0" layoutY="198.0" text="Sexo:" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TitledPane>
+                  <ToolBar layoutX="315.0" layoutY="258.0" prefHeight="48.0" prefWidth="128.0" style="-fx-background-color: transparent;">
+                     <items>
+                        <Button layoutX="711.0" layoutY="163.0" mnemonicParsing="false" onAction="#clickAbrir" prefHeight="38.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icono/open.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#clickCerrar" prefHeight="38.0" prefWidth="58.0" style="-fx-background-color: transparent;">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icono/close.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </items>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </ToolBar>
+                  <Label layoutX="678.0" layoutY="155.0" text="ID empleado:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblId" layoutX="760.0" layoutY="150.0" prefHeight="25.0" prefWidth="51.0" textFill="#d71111">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="buscar" layoutX="55.0" layoutY="267.0" prefHeight="25.0" prefWidth="169.0" promptText="Buscar" />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="233.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icono/search.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="838.0" layoutY="266.0" mnemonicParsing="false" onAction="#clickAgregarUsu" style="-fx-background-color: #cc0000; -fx-border-color: #000066; -fx-border-radius: 6; -fx-background-radius: 6;" text="Añadir como usuario" textFill="#fcf7f7">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="634.0" layoutY="271.0" text="Total registros:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="total" layoutX="741.0" layoutY="267.0" prefHeight="30.0" prefWidth="58.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="194.0" prefWidth="772.0" style="-fx-background-image: url(&quot;empleados.png&quot;);">
+               <children>
+                  <ImageView fx:id="imagen" fitHeight="234.0" fitWidth="819.0" layoutX="16.0" pickOnBounds="true" preserveRatio="true" />
+                  <TabPane fx:id="pane" layoutX="51.0" layoutY="6.0" prefHeight="227.0" prefWidth="782.0">
+                     <tabs>
+                        <Tab fx:id="tab" closable="false" text="Empleados registrados">
+                           <content>
+                              <TableView fx:id="tvEmpleados" onMouseClicked="#clickTabla" prefHeight="150.0" prefWidth="641.0" stylesheets="@estilos.css">
+                                 <columns>
+                                    <TableColumn prefWidth="125.0" text="Nombre">
+                                    	<cellValueFactory>
+               								<PropertyValueFactory property="nombre" />
+          								</cellValueFactory>
+          							</TableColumn>
+                                    <TableColumn prefWidth="141.0" text="Apellido paterno">
+                                    	<cellValueFactory>
+					               			<PropertyValueFactory property="aPaterno" />
+					          			</cellValueFactory>
+					          		</TableColumn>
+                                    <TableColumn prefWidth="130.0" text="Apellido materno">
+                                        <cellValueFactory>
+					               			<PropertyValueFactory property="aMaterno" />
+					          			</cellValueFactory>
+					          		</TableColumn>
+                                    <TableColumn prefWidth="92.0" text="Teléfono">
+                                    	<cellValueFactory>
+					               			<PropertyValueFactory property="telefono" />
+					          			</cellValueFactory>
+					          		</TableColumn>
+                                    <TableColumn prefWidth="169.0" text="Correo eletrónico">
+                                    	<cellValueFactory>
+					               			<PropertyValueFactory property="email" />
+					          			</cellValueFactory>
+					          		</TableColumn>
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy></TableView>
+                           </content></Tab>
+                     </tabs>
+                  </TabPane>
+                  <ToolBar layoutX="861.0" layoutY="39.0" orientation="VERTICAL" prefHeight="156.0" prefWidth="76.0" style="-fx-background-color: transparent;" styleClass="estilos.css" translateX="1.0">
+                     <items>
+                        <Button fx:id="btnNuevo" layoutX="725.0" layoutY="14.0" mnemonicParsing="false" onAction="#clickNuevo" prefHeight="30.0" prefWidth="80.0" stylesheets="@estilos.css" text="Nuevo">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnGuardar" graphicTextGap="0.0" layoutX="727.0" layoutY="45.0" mnemonicParsing="false" onAction="#clickGuardar" prefHeight="30.0" prefWidth="80.0" stylesheets="@estilos.css" text="Guardar">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnEditar" layoutX="727.0" layoutY="76.0" mnemonicParsing="false" onAction="#clickEditar" prefHeight="30.0" prefWidth="80.0" stylesheets="@estilos.css" text="Editar">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnEliminar" layoutX="727.0" layoutY="151.0" mnemonicParsing="false" onAction="#clickEliminar" prefHeight="30.0" prefWidth="80.0" stylesheets="@estilos.css" text="Eliminar">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#cancel" prefHeight="30.0" prefWidth="80.0" stylesheets="@estilos.css" text="Cancelar">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </items>
+                  </ToolBar>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

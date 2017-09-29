@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.net.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="493.0" prefWidth="956.0" snapToPixel="false" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gruisem.controlador.ControladorProducto">
+   <children>
+      <SplitPane dividerPositions="0.6236897274633124" focusTraversable="true" prefHeight="493.0" prefWidth="956.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="433.0" prefWidth="543.0">
+               <children>
+                  <ImageView fx:id="imagen" fitHeight="340.0" fitWidth="502.0" layoutX="68.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true" />
+                  <TextField fx:id="buscar" layoutX="54.0" layoutY="76.0" prefWidth="200.0" promptText="Buscar producto" />
+                  <Button layoutX="268.0" layoutY="76.0" mnemonicParsing="false" styleClass="botones" stylesheets="@estilos.css" text="Buscar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" fx:id="x2" />
+                     </font>
+                  </Button>
+                  <ToolBar layoutX="456.0" layoutY="76.0" style="-fx-background-color: transparent;">
+                     <items>
+                        <Button layoutX="412.0" layoutY="143.0" mnemonicParsing="false" onAction="#abrir" prefHeight="35.0" prefWidth="33.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icono/open.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="470.0" layoutY="143.0" mnemonicParsing="false" onAction="#cerrar" prefHeight="22.0" prefWidth="46.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icono/close.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </items>
+                  </ToolBar>
+                  <TabPane fx:id="tab" layoutX="53.0" layoutY="160.0" prefHeight="315.0" prefWidth="510.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Productos registrados">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="269.0" prefWidth="496.0">
+                                 <children>
+                                    <TableView fx:id="tvProductos" layoutX="-5.0" layoutY="-1.0" onMouseClicked="#getProductoSeleccionado" prefHeight="286.0" prefWidth="522.0" stylesheets="@estilos.css" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="-1.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+                  <Label layoutX="54.0" layoutY="113.0" text="Total registros:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="161.0" layoutY="104.0" prefHeight="38.0" prefWidth="73.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="258.0" layoutY="26.0" text="Productos">
+                     <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="534.0" prefWidth="367.0">
+               <children>
+                  <Label layoutX="144.0" layoutY="84.0" prefHeight="25.0" prefWidth="135.0" />
+                  <TitledPane animated="false" collapsible="false" layoutX="44.0" layoutY="31.0" prefHeight="375.0" prefWidth="270.0" text="Datos generales">
+                    <content>
+                        <GridPane layoutX="28.0" layoutY="16.0" prefHeight="248.0" prefWidth="213.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TextField fx:id="smax" layoutX="143.0" layoutY="154.0" prefHeight="25.0" prefWidth="135.0" promptText="Stock máximo" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label layoutX="51.0" layoutY="158.0" text="Stock máximo:" GridPane.rowIndex="3" />
+                              <Label text="Clave:" />
+                              <TextField fx:id="clave" prefHeight="25.0" prefWidth="135.0" promptText="Clave" GridPane.columnIndex="1" />
+                              <Label text="Nombre:" GridPane.rowIndex="1" />
+                              <TextField fx:id="nombre" prefHeight="25.0" prefWidth="128.0" promptText="Nombre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="precio" prefHeight="25.0" prefWidth="135.0" promptText="\$" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label text="Precio:" GridPane.rowIndex="2" />
+                              <Label text="Stock mínimo:" GridPane.rowIndex="4" />
+                              <TextField fx:id="smin" prefHeight="25.0" prefWidth="135.0" promptText="Stock mínimo" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label text="Marca:" GridPane.rowIndex="5" />
+                              <ComboBox fx:id="marca" prefHeight="25.0" prefWidth="135.0" promptText="Seleccionar" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList" />
+                                 </items>
+                              </ComboBox>
+                              <Label text="Categoria:" GridPane.rowIndex="6" />
+                              <ComboBox fx:id="categoria" prefHeight="25.0" prefWidth="135.0" promptText="Seleccionar" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList" />
+                                 </items>
+                              </ComboBox>
+                              <Label text="Proveedor:" GridPane.rowIndex="7" />
+                              <ComboBox fx:id="proveedor" prefHeight="25.0" prefWidth="135.0" promptText="Seleccionar" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList" />
+                                 </items>
+                              </ComboBox>
+                           </children>
+                        </GridPane>
+                    </content>
+                  </TitledPane>
+                  <Label layoutX="44.0" layoutY="418.0" text="Producto número:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="id" layoutX="152.0" layoutY="413.0" prefHeight="27.0" prefWidth="54.0" textFill="#f82b2b">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ToolBar layoutX="6.0" layoutY="453.0" prefHeight="35.0" prefWidth="356.0" style="-fx-background-color: transparent;">
+                     <items>
+                        <Button fx:id="nuevo" font="$x2" layoutX="21.0" layoutY="332.0" mnemonicParsing="false" onAction="#nuevoProducto" prefHeight="25.0" prefWidth="60.0" styleClass="botones" stylesheets="@estilos.css" text="Nuevo" textFill="#eeeeec">
+                        </Button>
+                        <Button fx:id="guardar" font="$x2" layoutX="21.0" layoutY="231.0" mnemonicParsing="false" onAction="#agregarProducto" prefHeight="25.0" prefWidth="74.0" styleClass="botones" stylesheets="@estilos.css" text="Agregar" textFill="#eeeeec">
+                        </Button>
+                        <Button fx:id="editar" font="$x2" layoutX="21.0" layoutY="264.0" mnemonicParsing="false" onAction="#editarProducto" prefHeight="25.0" prefWidth="72.0" styleClass="botones" stylesheets="@estilos.css" text="Editar" textFill="#eeeeec">
+                        </Button>
+                        <Button fx:id="eliminar" font="$x2" layoutX="21.0" layoutY="299.0" mnemonicParsing="false" onAction="#eliminarProducto" prefHeight="25.0" prefWidth="64.0" styleClass="botones" stylesheets="@estilos.css" text="Eliminar" textFill="#eeeeec">
+                        </Button>
+                        <Button fx:id="cancelar" mnemonicParsing="false" onAction="#cancelar" stylesheets="@estilos.css" text="Cancelar">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </items>
+                  </ToolBar>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

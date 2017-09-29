@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="480.0" prefWidth="859.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gruisem.controlador.ControladorMenu">
+   <children>
+      <BorderPane fx:id="bp" layoutX="-31.0" layoutY="172.0" prefHeight="448.0" prefWidth="859.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <VBox alignment="CENTER" prefHeight="469.0" prefWidth="859.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="91.0" prefWidth="300.0" text="GRUISEM" textAlignment="CENTER" textFill="#d02d08">
+                     <font>
+                        <Font name="Franklin Gothic Demi Cond" size="76.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="23.0" prefWidth="311.0" text="GRUPO INDUSTRIAL DE SEGURIDAD " textFill="#d37517">
+                     <font>
+                        <Font name="Franklin Gothic Demi" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </center>
+         <top>
+            <ToolBar prefHeight="95.0" prefWidth="952.0" style="-fx-background-color: #990000;">
+               <items>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="85.0" opacity="0.46" stroke="WHITE" strokeType="INSIDE" width="2.0" />
+                  <VBox alignment="CENTER" prefHeight="85.0" prefWidth="446.0">
+                     <children>
+                        <ToolBar prefHeight="67.0" prefWidth="435.0" style="-fx-background-color: #990000;">
+                           <items>
+                              <Button fx:id="btnProductos" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#clickProductos" prefHeight="57.0" prefWidth="71.0" style="-fx-background-color: transparent; -fx-background-radius: 40;" text="Productos" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icono/producto.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip anchorLocation="WINDOW_TOP_LEFT" anchorX="0.0" anchorY="0.0" contentDisplay="TOP" graphicTextGap="8.0" text="Agrega, elimina o edita un producto." textAlignment="JUSTIFY" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <Label contentDisplay="BOTTOM" text="Productos">
+
+                                             <font>
+                                                <Font name="Arial Black" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Tooltip>
+                                 </tooltip>
+                              </Button>
+                              <Button fx:id="btnClientes" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#clickClientes" prefHeight="53.0" prefWidth="54.0" style="-fx-background-color: transparent; -fx-background-radius: 40;" text="Clientes" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icono/cliente.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip anchorLocation="WINDOW_TOP_LEFT" anchorX="0.0" anchorY="0.0" contentDisplay="TOP" graphicTextGap="8.0" text="Agrega, elimina o edita un cliente." textAlignment="JUSTIFY" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+                                       <font>
+                                          <Font name="Arial Black" size="9.0" />
+                                       </font>
+                                       <graphic>
+                                          <Label contentDisplay="BOTTOM" text="Clientes">
+
+                                             <font>
+                                                <Font name="Arial Black" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Tooltip>
+                                 </tooltip>
+                              </Button>
+                              <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#clickEmpleados" prefHeight="57.0" prefWidth="77.0" style="-fx-background-color: transparent; -fx-background-radius: 40;" text="Empleados" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icono/emp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip anchorLocation="WINDOW_TOP_LEFT" anchorX="0.0" anchorY="0.0" contentDisplay="TOP" graphicTextGap="8.0" text="Agrega, elimina o edita un empleado." textAlignment="JUSTIFY" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <Label contentDisplay="BOTTOM" text="Empleados">
+
+                                             <font>
+                                                <Font name="Arial Black" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Tooltip>
+                                 </tooltip>
+                              </Button>
+                              <Button fx:id="btnProveedores" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#clickProveedores" prefHeight="57.0" prefWidth="83.0" style="-fx-background-color: transparent; -fx-background-radius: 40;" text="Proveedores" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icono/proveedor.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip anchorLocation="WINDOW_TOP_LEFT" anchorX="0.0" anchorY="0.0" contentDisplay="TOP" graphicTextGap="8.0" text="Agrega, elimina o edita un proveedor." textAlignment="JUSTIFY" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <Label contentDisplay="BOTTOM" text="Proveedores">
+
+                                             <font>
+                                                <Font name="Arial Black" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Tooltip>
+                                 </tooltip>
+                              </Button>
+                              <Button alignment="CENTER" onAction="#clickCategorias" contentDisplay="TOP" mnemonicParsing="false" prefHeight="57.0" prefWidth="73.0" style="-fx-background-color: transparent; -fx-background-radius: 40;" text="Categorías" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icono/ca.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip anchorLocation="WINDOW_TOP_LEFT" anchorX="0.0" anchorY="0.0" contentDisplay="TOP" graphicTextGap="8.0" text="Agrega, elimina o edita una categoría." textAlignment="JUSTIFY" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <Label contentDisplay="BOTTOM" text="Categorías">
+
+                                             <font>
+                                                <Font name="Arial Black" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Tooltip>
+                                 </tooltip>
+                              </Button>
+                              <Button onAction="#clickMarcas" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="53.0" prefWidth="54.0" style="-fx-background-color: transparent; -fx-background-radius: 40;" text="Marcas" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icono/mar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip anchorLocation="WINDOW_TOP_LEFT" anchorX="0.0" anchorY="0.0" contentDisplay="TOP" graphicTextGap="8.0" text="Agrega, elimina o edita una marca." textAlignment="JUSTIFY" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <Label contentDisplay="BOTTOM" text="Marcas">
+
+                                             <font>
+                                                <Font name="Arial Black" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Tooltip>
+                                 </tooltip>
+                              </Button>
+                           </items>
+                        </ToolBar>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="1.0" opacity="0.46" stroke="WHITE" strokeType="INSIDE" width="430.0" />
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Catálogos" wrappingWidth="61.0">
+                           <font>
+                              <Font name="Berlin Sans FB Bold" size="11.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="85.0" opacity="0.46" stroke="WHITE" strokeType="INSIDE" width="2.0" />
+                  <VBox alignment="CENTER" prefHeight="85.0" prefWidth="210.0">
+                     <children>
+                        <ToolBar prefHeight="67.0" prefWidth="191.0" style="-fx-background-color: #990000;">
+                           <items>
+                            <Button onAction="#clickVen" fx:id="btnVentas" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="57.0" prefWidth="55.0" style="-fx-background-color: transparent; -fx-background-radius: 40;" text="Ventas" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icono/cash-register.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <tooltip>
+                                    <Tooltip anchorLocation="WINDOW_TOP_LEFT" anchorX="0.0" anchorY="0.0" contentDisplay="TOP" graphicTextGap="8.0" text="Comienza a vender un producto." textAlignment="JUSTIFY" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <Label contentDisplay="BOTTOM" text="Ventas">
+
+                                             <font>
+                                                <Font name="Arial Black" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Tooltip>
+                                 </tooltip>
+                              </Button>
+                              <Button onAction="#clickCompras" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="56.0" prefWidth="62.0" style="-fx-background-color: transparent; -fx-background-radius: 40;" text="Compras" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icono/carro.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip anchorLocation="WINDOW_TOP_LEFT" anchorX="0.0" anchorY="0.0" contentDisplay="TOP" graphicTextGap="8.0" text="Agrega productos recién comprados." textAlignment="JUSTIFY" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <Label contentDisplay="BOTTOM" text="Compras">
+
+                                             <font>
+                                                <Font name="Arial Black" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Tooltip>
+                                 </tooltip>
+                              </Button>
+                              <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="56.0" prefWidth="61.0" style="-fx-background-color: transparent; -fx-background-radius: 40;" text="Reportes" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icono/repor3.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip anchorLocation="WINDOW_TOP_LEFT" anchorX="0.0" anchorY="0.0" contentDisplay="TOP" graphicTextGap="8.0" text="Imprime un reporte personalizado." textAlignment="JUSTIFY" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <Label contentDisplay="BOTTOM" text="Reportes">
+
+                                             <font>
+                                                <Font name="Arial Black" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Tooltip>
+                                 </tooltip>
+                              </Button>
+                           </items>
+                        </ToolBar>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="1.0" opacity="0.46" stroke="WHITE" strokeType="INSIDE" width="180.0" />
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Movimientos" wrappingWidth="72.74072265625">
+                           <font>
+                              <Font name="Berlin Sans FB Bold" size="11.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="85.0" opacity="0.46" stroke="WHITE" strokeType="INSIDE" width="2.0" />
+                  <VBox alignment="CENTER" prefHeight="85.0" prefWidth="211.0">
+                     <children>
+                        <ToolBar prefHeight="67.0" prefWidth="240.0" style="-fx-background-color: #990000;">
+                           <items>
+                              <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#clickPepelera" prefHeight="56.0" prefWidth="66.0" style="-fx-background-color: transparent; -fx-background-radius: 40;" text="Papelera " textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icono/rec5.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <tooltip>
+                                    <Tooltip anchorLocation="WINDOW_TOP_LEFT" anchorX="0.0" anchorY="0.0" contentDisplay="TOP" graphicTextGap="8.0" text="Recupera un elemento que hayas eliminado de los catálogos." textAlignment="JUSTIFY" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <Label contentDisplay="BOTTOM" text="Papelera de reciclaje">
+
+                                             <font>
+                                                <Font name="Arial Black" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Tooltip>
+                                 </tooltip>
+                              </Button>
+                              <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="56.0" prefWidth="51.0" style="-fx-background-color: transparent; -fx-background-radius: 40;" text="Ayuda" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icono/au.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <tooltip>
+                                    <Tooltip anchorLocation="WINDOW_TOP_LEFT" anchorX="0.0" anchorY="0.0" contentDisplay="TOP" graphicTextGap="8.0" text="Consulta nuestro manual de usuario." textAlignment="JUSTIFY" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <Label contentDisplay="BOTTOM" text="Ayuda">
+
+                                             <font>
+                                                <Font name="Arial Black" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Tooltip>
+                                 </tooltip>
+                              </Button>
+                              <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#clickCerrarSesion" prefHeight="57.0" prefWidth="90.0" style="-fx-background-color: transparent; -fx-background-radius: 40;" text="Cerrar Sesión" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icono/lo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <tooltip>
+                                    <Tooltip anchorLocation="WINDOW_TOP_LEFT" anchorX="0.0" anchorY="0.0" contentDisplay="TOP" graphicTextGap="8.0" text="Cierra sesión para poder acceder como otro usuario." textAlignment="JUSTIFY" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <Label contentDisplay="BOTTOM" text="Cerrar Sesión">
+
+                                             <font>
+                                                <Font name="Arial Black" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Tooltip>
+                                 </tooltip>
+                              </Button>
+                           </items>
+                        </ToolBar>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="1.0" opacity="0.46" stroke="WHITE" strokeType="INSIDE" width="241.0" />
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Sistema">
+                           <font>
+                              <Font name="Berlin Sans FB Bold" size="11.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="85.0" opacity="0.46" stroke="WHITE" strokeType="INSIDE" width="2.0" />
+               </items>
+            </ToolBar>
+         </top>
+         <bottom>
+            <ToolBar prefHeight="45.0" prefWidth="939.0" style="-fx-background-color: #990000;">
+               <items>
+                  <HBox prefHeight="25.0" prefWidth="153.0">
+                     <children>
+                        <ImageView fitHeight="22.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icono/ll.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblHora" prefHeight="22.0" prefWidth="111.0" textFill="#fffafa">
+                           <font>
+                              <Font name="Arial Black" size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <ImageView fitHeight="22.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icono/u.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblMensaje" prefHeight="23.0" prefWidth="155.0" textFill="#fffafa">
+                           <font>
+                              <Font name="Arial Black" size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox />
+                  <Button alignment="BASELINE_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#clickSalir" prefHeight="30.0" prefWidth="136.0" style="-fx-background-color: transparent; -fx-background-radius: 40;" text="Salir del sistema" textAlignment="RIGHT" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Berlin Sans FB" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icono/salir.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <tooltip>
+                        <Tooltip anchorLocation="WINDOW_TOP_LEFT" anchorX="0.0" anchorY="0.0" contentDisplay="TOP" graphicTextGap="8.0" text="Sal del sistema." textAlignment="JUSTIFY" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <graphic>
+                              <Label contentDisplay="BOTTOM" text="Salir">
+                                 <graphic>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icono/salir.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font name="Arial Black" size="13.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Tooltip>
+                     </tooltip>
+                  </Button>
+                  <Label prefHeight="30.0" prefWidth="89.0" />
+               </items>
+            </ToolBar>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
+

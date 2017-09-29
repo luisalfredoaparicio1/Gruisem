@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="264.0" prefWidth="301.0" style="-fx-background-color: #ffffb3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gruisem.controlador.ControladorUsuario">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="20.0" layoutY="14.0" prefHeight="205.0" prefWidth="261.0" text="Registro de nuevo usuario">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="15.0" layoutY="9.0" prefHeight="159.0" prefWidth="251.0">
+                     <children>
+                        <TextField fx:id="nomUsu" layoutX="84.0" layoutY="9.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label layoutX="23.0" layoutY="64.0" text="Nivel:" GridPane.rowIndex="3" />
+                        <Label layoutX="23.0" layoutY="18.0" text="Nombre:" GridPane.rowIndex="1" />
+                        <Label layoutX="23.0" layoutY="43.0" text="Contraseña:" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="nivelUsu" prefHeight="25.0" prefWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="*" textFill="#f81515" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="*" textFill="#f81515" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="*" textFill="#f81515" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="passUsu" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="ID empleado:" />
+                        <TextField fx:id="idEmp" GridPane.columnIndex="1" />
+                        <Label text="*" textFill="#f81515" GridPane.columnIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="79.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.0" minWidth="10.0" prefWidth="146.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="25.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </content>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TitledPane>
+      <ToolBar layoutX="6.0" layoutY="225.0" style="-fx-background-color: transparent;" stylesheets="@estilos.css">
+         <items>
+            <Button layoutX="68.0" layoutY="180.0" mnemonicParsing="false" onAction="#agregarUsuario" text="Agregar">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="165.0" layoutY="180.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="closeButton" layoutX="165.0" layoutY="180.0" mnemonicParsing="false" onAction="#cerrar" text="Cerrar">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

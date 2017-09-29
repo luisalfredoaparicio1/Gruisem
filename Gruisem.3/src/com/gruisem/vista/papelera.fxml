@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<AnchorPane prefHeight="368.0" prefWidth="668.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gruisem.controlador.ControladorPapelera">
+   <children>
+      <SplitPane layoutX="7.0" layoutY="4.0" prefHeight="360.0" prefWidth="608.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <TabPane prefHeight="473.0" prefWidth="789.0" tabClosingPolicy="UNAVAILABLE" tabMinWidth="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="127.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab style="-fx-background-color: #ffffff;">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <HBox layoutX="14.0" layoutY="14.0" prefHeight="300.0" prefWidth="561.0">
+                                 <children>
+                                    <TableView fx:id="tvProveedores" layoutX="172.0" layoutY="55.0" onMouseClicked="#clickTablas" prefHeight="307.0" prefWidth="555.0">
+                                       <columns>
+                                          <TableColumn prefWidth="162.0" text="Razón Social">
+                                          		<cellValueFactory>
+					                     			<PropertyValueFactory property="razonSocial" />
+					                			</cellValueFactory>
+					                	  </TableColumn>
+                                          <TableColumn minWidth="0.0" prefWidth="154.0" text="Contacto">
+                                          		<cellValueFactory>
+					                     			<PropertyValueFactory property="contacto" />
+					                			</cellValueFactory>
+					                	  </TableColumn>
+                                          <TableColumn minWidth="1.0" prefWidth="85.0" text="Telefono">
+                                          		<cellValueFactory>
+					                     			<PropertyValueFactory property="telefono" />
+					                			</cellValueFactory>
+					                	  </TableColumn>
+                                          <TableColumn prefWidth="151.0" text="Correo">
+                                          		<cellValueFactory>
+					                     			<PropertyValueFactory property="email" />
+					                			</cellValueFactory>
+					                	  </TableColumn>
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="btnRes" disable="true" layoutX="575.0" layoutY="14.0" mnemonicParsing="false" onAction="#recuperarProv" prefHeight="30.0" prefWidth="41.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-background-color: transparent;">
+                                 <font>
+                                    <Font name="System Bold" size="10.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="48.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icono/re.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icono/proveedor.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                </Tab>
+                  <Tab style="-fx-background-color: #ffffff;">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <HBox layoutX="15.0" layoutY="15.0" prefHeight="300.0" prefWidth="550.0">
+                                 <children>
+                                    <TableView fx:id="tvClientes" layoutX="172.0" layoutY="55.0" onMouseClicked="#clickTablas1" prefHeight="300.0" prefWidth="543.0">
+                                       <columns>
+                                          <TableColumn prefWidth="82.0" text="Nombre">
+                                          		<cellValueFactory>
+					                     			<PropertyValueFactory property="nombre" />
+					                			</cellValueFactory>
+					                	  </TableColumn>
+                                          <TableColumn prefWidth="107.0" text="Apellido paterno">
+                                          		<cellValueFactory>
+					                     			<PropertyValueFactory property="aPaterno" />
+					                			</cellValueFactory>
+					                	  </TableColumn>
+                                          <TableColumn prefWidth="115.0" text="Apellido materno">
+                                          		<cellValueFactory>
+					                     			<PropertyValueFactory property="aMaterno" />
+					                			</cellValueFactory>
+					                	  </TableColumn>
+                                          <TableColumn prefWidth="83.0" text="Teléfono">
+                                          		<cellValueFactory>
+					                     			<PropertyValueFactory property="telefono" />
+					                			</cellValueFactory>
+					                	  </TableColumn>
+                                          <TableColumn prefWidth="154.0" text="Correo">
+                                          		<cellValueFactory>
+					                     			<PropertyValueFactory property="email" />
+					                			</cellValueFactory>
+					                	  </TableColumn>
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="btnRes1" layoutX="565.0" layoutY="15.0" mnemonicParsing="false" onAction="#recuperarCli" opacity="0.0" prefHeight="30.0" prefWidth="41.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-background-color: transparent;">
+                                 <font>
+                                    <Font name="System Bold" size="10.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="48.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icono/re.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icono/cliente.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Tab>
+                  <Tab closable="false" style="-fx-background-color: #ffffff;">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="329.0" prefWidth="664.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <HBox layoutX="23.0" layoutY="15.0" prefHeight="300.0" prefWidth="534.0">
+                                 <children>
+                                    <TableView fx:id="tvEmpleados" layoutX="172.0" layoutY="55.0" onMouseClicked="#clickTablas2" prefHeight="300.0" prefWidth="525.0">
+                                       <columns>
+                                          <TableColumn prefWidth="84.0" text="Nombre">
+                                          		<cellValueFactory>
+					                     			<PropertyValueFactory property="nombre" />
+					                			</cellValueFactory>
+					                	  </TableColumn>
+                                          <TableColumn prefWidth="108.0" text="Apellido paterno">
+                                          		<cellValueFactory>
+					                     			<PropertyValueFactory property="aPaterno" />
+					                			</cellValueFactory>
+					                	  </TableColumn>
+                                          <TableColumn prefWidth="111.0" text="Apellido materno">
+                                          		<cellValueFactory>
+					                     			<PropertyValueFactory property="aMaterno" />
+					                			</cellValueFactory>
+					                	  </TableColumn>
+                                          <TableColumn prefWidth="82.0" text="Teléfono">
+                                          		<cellValueFactory>
+					                     			<PropertyValueFactory property="telefono" />
+					                			</cellValueFactory>
+					                	  </TableColumn>
+                                          <TableColumn prefWidth="138.0" text="Correo">
+                                          		<cellValueFactory>
+					                     			<PropertyValueFactory property="email" />
+					                			</cellValueFactory>
+					                	  </TableColumn>
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="btnRes2" layoutX="557.0" layoutY="14.0" mnemonicParsing="false" onAction="#recuperarEmp" opacity="0.0" prefHeight="30.0" prefWidth="41.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-background-color: transparent;">
+                                 <font>
+                                    <Font name="System Bold" size="10.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="48.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icono/re.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icono/emp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Tab>
+                  <Tab style="-fx-background-color: #ffffff;">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <HBox layoutX="148.0" layoutY="15.0" prefHeight="300.0" prefWidth="284.0">
+                                 <children>
+                                    <TableView fx:id="tvMarcas" layoutX="172.0" layoutY="55.0" onMouseClicked="#clickTablas3" prefHeight="300.0" prefWidth="277.0">
+                                       <columns>
+                                          <TableColumn prefWidth="274.0" text="Nombre">
+                                          		<cellValueFactory>
+					                     			<PropertyValueFactory property="nombre_mar" />
+					                			</cellValueFactory>
+					                	  </TableColumn>
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="btnRes3" layoutX="432.0" layoutY="15.0" mnemonicParsing="false" onAction="#recuperarMar" opacity="0.0" prefHeight="30.0" prefWidth="41.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-background-color: transparent;">
+                                 <font>
+                                    <Font name="System Bold" size="10.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="48.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icono/re.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icono/mar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Tab>
+                  <Tab style="-fx-background-color: #ffffff;">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <HBox layoutX="149.0" layoutY="15.0" prefHeight="300.0" prefWidth="282.0">
+                                 <children>
+                                    <TableView fx:id="tvCategorias" layoutX="172.0" layoutY="55.0" onMouseClicked="#clickTablas4" prefHeight="300.0" prefWidth="275.0">
+                                       <columns>
+                                          <TableColumn prefWidth="274.0" text="Nombre">
+                                          		<cellValueFactory>
+					                     			<PropertyValueFactory property="nombre_cat" />
+					                			</cellValueFactory>
+					                	  </TableColumn>
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="btnRes4" layoutX="431.0" layoutY="15.0" mnemonicParsing="false" onAction="#recuperarCa" opacity="0.0" prefHeight="30.0" prefWidth="41.0" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-background-color: transparent;">
+                                 <font>
+                                    <Font name="System Bold" size="10.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="48.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icono/re.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icono/ca.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </items>
+      </SplitPane>
+      <Button layoutX="634.0" layoutY="335.0" mnemonicParsing="false" onAction="#cerrar" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icono/cancelar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<AnchorPane prefHeight="330.0" prefWidth="476.0" style="-fx-background-color: #ffffb3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gruisem.controlador.ControladorMarcas">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="4.0" prefHeight="321.0" prefWidth="465.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <SplitPane dividerPositions="0.5421166306695464" layoutX="1.0" prefHeight="394.0" prefWidth="720.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <items>
+                  <AnchorPane prefHeight="332.0" prefWidth="443.0">
+                     <children>
+                        <HBox layoutX="20.0" layoutY="54.0">
+                           <children>
+                              <ImageView fx:id="imgBuscar" fitHeight="25.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icono/search.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField fx:id="txtBuscar" layoutX="193.0" layoutY="123.0" onAction="#textChange_busqueda" promptText="Buscar Marca" style="-fx-background-radius: 7; -fx-border-color: #999999; -fx-border-radius: 7;" />
+                           </children>
+                        </HBox>
+                        <TableView fx:id="tvMarcas" layoutX="14.0" layoutY="91.0" onSort="#clickTableView" opacity="0.0" prefHeight="202.0" prefWidth="188.0">
+                          <columns>
+                            <TableColumn prefWidth="243.0" text="Nombre de la marca">
+                            	<cellValueFactory>
+                           			<PropertyValueFactory property="nombre" />
+                      			</cellValueFactory>
+                      		</TableColumn>
+                          </columns>
+                        </TableView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="81.0" layoutY="14.0" prefHeight="31.0" prefWidth="87.0" text="Marcas" textAlignment="CENTER">
+                           <font>
+                              <Font name="Berlin Sans FB Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="n" fitHeight="217.0" fitWidth="213.0" layoutX="46.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icono/marc.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="319.0" prefWidth="256.0">
+                     <children>
+                        <ToolBar layoutX="53.0" layoutY="124.0" orientation="VERTICAL" prefHeight="187.0" prefWidth="82.0" style="-fx-background-color: transparent;">
+                           <items>
+                              <Button fx:id="btnNuevo" contentDisplay="TOP" mnemonicParsing="false" onAction="#clickNuevo" prefHeight="25.0" prefWidth="72.0" styleClass="botones" stylesheets="@estilos.css" text="Nuevo" textFill="#eeeeec" />
+                              <Button fx:id="btnGuardar" contentDisplay="TOP" mnemonicParsing="false" onAction="#clickGuardar" prefHeight="25.0" prefWidth="72.0" styleClass="botones" stylesheets="@estilos.css" text="Guardar" textFill="#eeeeec" />
+                              <Button fx:id="btnTabla" contentDisplay="TOP" mnemonicParsing="false" onAction="#clickTabla" prefHeight="25.0" prefWidth="72.0" styleClass="botones" stylesheets="@estilos.css" text="Abrir" textFill="#eeeeec" />
+                              <Button fx:id="btnEliminar" contentDisplay="TOP" mnemonicParsing="false" onAction="#clickEliminar" prefHeight="25.0" prefWidth="72.0" styleClass="botones" stylesheets="@estilos.css" text="Eliminar" textFill="#eeeeec" />
+                              <Button fx:id="btnCancelar" contentDisplay="TOP" mnemonicParsing="false" onAction="#clickCancelar" prefHeight="25.0" prefWidth="72.0" styleClass="botones" stylesheets="@estilos.css" text="Cancelar" textFill="#eeeeec" />
+                              <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#cerrar" prefHeight="25.0" prefWidth="70.0" stylesheets="@estilos.css" text="Cerrar" />
+                           </items>
+                        </ToolBar>
+                        <VBox layoutX="17.0" layoutY="49.0">
+                           <children>
+                              <Label layoutX="-363.0" layoutY="336.0" prefHeight="20.0" prefWidth="69.0" text="Nombre:">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtMarcas" promptText="Marca" style="-fx-background-radius: 7; -fx-border-color: #999999; -fx-border-radius: 7;" />
+                           </children>
+                        </VBox>
+                        <Label layoutX="50.0" layoutY="14.0" text="Registro de marcas">
+                           <font>
+                              <Font name="Berlin Sans FB" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
